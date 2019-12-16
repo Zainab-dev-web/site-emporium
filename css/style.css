@@ -11,6 +11,11 @@ body header .div {
 }
 body header .div .navbar {
   list-style: none;
+  text-decoration: none;
+}
+body header .div .carre {
+  width: 5%;
+  height: 5%;
 }
 body .sect1 {
   background-color: #F3F3F3;
@@ -69,7 +74,7 @@ body .sect3 .container .row .col-4 {
 }
 body .sect4 .container {
   background-image: url("../js_site_web/images/cta-bg.jpg");
-  width: 1300px;
+  width: 100%;
   height: 50vh;
   background-position: center;
   background-size: cover;
@@ -77,6 +82,21 @@ body .sect4 .container {
 body .sect4 .container .btnsect4 {
   border-radius: 30px;
   border: none;
+}
+body .sect6 button {
+  border: none;
+  border-radius: 5%;
+}
+
+footer .info {
+  background-color: #302e2e;
+}
+footer .copy {
+  background-color: #1b1a1a;
+}
+
+footer .pinfo {
+  color: #b6b4b4;
 }
 
 /*# sourceMappingURL=style.css.map */
