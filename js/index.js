@@ -1,21 +1,21 @@
 // Déclaration des variables
 
 
-let themeblanc=document.getElementsByClassName('carre')[0]
-let themenoir=document.getElementsByClassName('carre')[1]
-let body=document.getElementsByTagName('body')
-let nav=document.getElementsByClassName('nav')
+let themeblanc=document.getElementsByClassName('btnnav1')[0]
+let themenoir=document.getElementsByClassName('btnnav2')[0]
+let body=document.getElementsByTagName('body')[0]
+let nav=document.getElementsByTagName('nav')[0]
 
 // Ecouteur d'evenement des themes
 
 themenoir.addEventListener('click' , event=>{
-    body.style.backgroundColor="#"
-    nav.style.backgroundColor="#"
+    body.style.backgroundColor="rgb(27, 26, 26)"
+    nav.style.backgroundColor="rgb(27, 26, 26)"
 })
 
 themeblanc.addEventListener('click', event=>{
-    body.style.backgroundColor="#"
-    nav.style.backgroundColor="#"
+    body.style.backgroundColor="rgb(250, 246, 248)"
+    nav.style.backgroundColor="rgb(250, 246, 248)"
 })
 
 
@@ -34,4 +34,25 @@ themeblanc.addEventListener('click', event=>{
 
 // Popup
 
-// faire comme j'ai fait pop up
+// déclaration des variables
+
+let btnPopup=document.getElementById('btnPopup')
+let overlay=document.getElementById('overlay')
+let btnClose=document.getElementById('btnClose')
+
+// Ecouteur d'evenement du popup
+
+btnPopup.addEventListener('click',openModal);
+
+function openModal(){
+    overlay.style.display='block';
+}
+function closePopup(){
+    overlay.style.display='none';
+}
+
+btnClose.addEventListener('click',closePopup);
+
+
+
+

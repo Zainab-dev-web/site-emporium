@@ -5,27 +5,68 @@ body
         .titre
             display: flex
             justify-content: center
-        .navbartout
+            .collapse
+                .nav
+                    flex-wrap: nowrap
+                    display: flex
+                    justify-content: center
+                    margin: 5% 0
+                    .nav-item
+                        list-style: none
+                        text-decoration: none
+                    .nav-item:hover
+                        color: black
+                        .nav-link
+                            color: black
+                            text-decoration: none
+                .btnnav1
+                    width: 30px
+                    height: 30px
+                .btnnav2
+                    width: 30px
+                    height: 30px
 
-            .div
-                flex-wrap: nowrap
-                display: flex
-                justify-content: center
-                margin: 5% 0
-                .navbar
-                    list-style: none
-                    text-decoration: none
-                .navbar:hover
-                    color: black
-            .carre
-                width: 30px
-                height: 30px
+                .btnheader
+                    border: none
+                    background-color: orangered
+                    padding: 1em 2em
+                    cursor: pointer
+                    font-size: 14pt
+                    color: black                   
+
+
+                .btnheader:hover
+                    background-color: gainsboro
+                .overlay
+                    position: fixed
+                    left:0px
+                    top:0px
+                    background-color:rgba(0, 0, 0, 0.5)
+                    width:100%
+                    height:100%
+                    display: none
                 
-            .btnheader
-                border: none
-            
+                    .popup
+                        margin:20% auto
+                        width:70%
+                        background-color: rgba(228, 228, 228)
+                        border-radius:5px
+                        box-shadow:15px 20px  rgba(0, 0, 0, 0.5)
+                        padding: 1em
+                        .btnClose
+                            float: right
+                            cursor: pointer
 
-            
+                    
+
+
+
+
+
+
+
+
+
 
     .sect1
         background-color: #F3F3F3
@@ -44,7 +85,7 @@ body
                         font-size: 100%
                     .btnsect1:hover
                         background-color: black
-                    
+
                     .btnsect1::after
                         content: ""
                     .btnsect1:hover::after
@@ -53,7 +94,6 @@ body
                         transition: ease .5s
                     .btnsect1:focus
                         outline: none
-
 
     .sect2
         .divsect2
@@ -93,23 +133,21 @@ body
 
                 .col-4
                     align-items: center
-                 
-                            
 
     .sect4
 
         .divbg
-            
+
             background-image: url("../js_site_web/images/cta-bg.jpg")
             height: 700px
             background-size: cover
-            background-position: center                
+            background-position: center
             background-attachment: fixed
             .btnsect4
                 border-radius: 30px
                 border: none
     .sect5
-        
+
         font-size: 10px
 
     .sect6
@@ -120,7 +158,7 @@ body
 footer
     .info
         background-color: rgb(48, 46, 46)
-    .info a   
+    .info a
         text-decoration: none
         color: #b6b4b4
         border-radius: none
@@ -128,7 +166,6 @@ footer
         &:hover
             color: white
 
-            
     .copy
         background-color: rgb(27, 26, 26)
 footer .pinfo
@@ -137,11 +174,6 @@ footer
     font-size: 15px
 footer a
     border-color: #b6b4b4
-
-
-
-
-
 
     // pour le media query
     //     a 1000px
