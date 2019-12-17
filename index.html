@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -14,6 +15,11 @@
     <header class="text-center">
         <img class="w-0 mt-5" src="js_site_web/images/logo.png" alt="">
         <div class="navbartout ">
+            <!-- nav a refaire -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="div text-center flex-nowrap ">
                 <nav class="navbar text-uppercase"><a class="text-dark" href="#">Home</a></nav>
                 <nav class="navbar text-uppercase"><a class="text-dark" href="#">Product</a></nav>
@@ -21,10 +27,12 @@
                 <nav class="navbar text-uppercase"><a class="text-dark" href="#">Elements</a></nav>
                 <nav class="navbar text-uppercase"><a class="text-dark" href="#">About</a></nav>
                 <nav class="navbar text-uppercase"><a class="text-dark" href="#">Contact</a></nav>
+                <div class="carre ml-auto bg-white border mx-1"></div>
+                <div class="carre ml-1 bg-dark border mx-1"></div>
+                <div>
+                    <button class='btnheader bg-dark text-light ml-auto'>Connection</button>
+                </div>
             </div>
-            <div class="carre ml-auto bg-white border-dark"></div>
-            <div class="carre ml-auto bg-dark border-dark"></div>
-            <button class='btnheader bg-dark text-light ml-auto'>Connection</button>
         </div>
     </header>
 
@@ -40,7 +48,7 @@
                         these
                         sweet
                         mornings of springs which l-enjoy with my.</p>
-                    <button class="btnsect1 bg-danger text-white text-uppercase px-5 py-2">Sale items</button>
+                    <button class="btnsect1 text-white text-uppercase px-5 py-2">Sale items</button>
                 </div>
                 <div class="col">
                     <img class="w-100" src="js_site_web/images/slider-1.jpg" alt="">
@@ -63,9 +71,9 @@
     </section>
     <section class="sect3 mx-auto">
         <h5 class="h5sect3 text-center my-5"><strong>Recent Products</strong></h5>
-        <div class="container mx-auto w-50">
+        <div class="container mx-auto w-75">
             <div class="row mx-auto">
-                <div class="col-4 text-center"><img class='w-100'
+                <div class="col-4 text-center"><img class='w-100 my-2'
                         src="./js_site_web/images/products_mini/product-luxry-sofa.jpg" alt="">
                     <div class="divsect3 my-3">
                         <p class="pachat"><strong>Luxury Sofa</strong></p>
@@ -73,17 +81,24 @@
                         <p class="prixsect3 text-danger">$600.00</p>
                     </div>
                 </div>
-                <div class="col-4 text-center"><img class="w-100"
+                <div class="col-4 text-center"><img class=" w-100 my-2"
                         src="js_site_web/images/products_mini/product-gloves.jpg" alt="">
-                    <i class="icone bg-danger"></i>
-                    <div class='divsect3 my-3'>
-                        <p class="pachat"><strong>Leather Gloves</strong></p>
-                        <span class="prixsect3 text-secondary">$34.00</span>
-                        <span class="prixsect3 text-danger">$27.00</span>
+
+                    <div class='divsect3 my-3 d-flex justify-content-center'>
+                        <div class="divsale">
+                            <span class="sale rounded-circle px-2 py-3 bg-danger text-white">Sale!</span>
+
+                        </div>
+                        <div>
+                            <p class="pachat"><strong>Leather Gloves</strong></p>
+                            <span class="prixsect3 text-secondary"><del>$34.00</del></span>
+                            <span class="prixsect3 text-danger">$27.00</span>
+                        </div>
+
                     </div>
                 </div>
 
-                <div class="col-4 text-center"><img class="w-100"
+                <div class="col-4 text-center"><img class="w-100 my-2"
                         src="js_site_web/images/products_mini/product-cups.jpg" alt="">
                     <div class="divsect3 my-3">
                         <p class="pachat"><strong>Colorful Bowl</strong></p>
@@ -91,108 +106,126 @@
                     </div>
                 </div>
             </div>
-            
-            
+
+
             <div class="row">
-                
-                <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products/product-bag-700x500.jpg"
-                    alt="">
 
-                    <i class="icone bg-danger"></i>
+                <div class="col-4 text-center"><img class="w-100 my-2"
+                        src="js_site_web/images/products/product-bag-700x500.jpg" alt="">
 
-                <div class="divsect3 my-3">
-                    <p class="pachat"><strong>Women Bag</strong></p>
-                    <span class="prixsect3 text-secondary">$420.00</span>
-                    <span class="prixsect3 text-danger">$350.00</span>
-                    
+                    <div class='divsect3 my-3 d-flex justify-content-center'>
+                        <div class="divsale">
+                            <span class="sale rounded-circle px-2 py-3 bg-danger text-white">Sale!</span>
+
+                        </div>
+                        <div>
+                            <p class="pachat"><strong>Women Bag</strong></p>
+                            <span class="prixsect3 text-secondary"><del>$420.00</del></span>
+                            <span class="prixsect3 text-danger">$350.00</span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="col-4 text-center"><img class="w-100 my-2"
+                        src="js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
+                    <div class="divsect3 my-3">
+                        <p class="pachat"><strong>Minimal T-Shirt</strong></p>
+                        <span class="prixsect3 text-danger">$15.00</span>
+                    </div>
+                </div>
+
+                <div class="col-4 text-center"><img class="w-100 my-2"
+                        src="js_site_web/images/products_mini/product-plates.jpg" alt="">
+                    <div class="divsect3 my-3">
+                        <p class="pachat"><strong>Plates Set</strong></p>
+                        <span class="prixsect3 text-danger">$30.00</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-4 text-center"><img class="w-100"
-                    src="js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
+
+            <div class="row">
+
+
+
+                <div class="col-4 text-center"><img class="w-100 my-2"
+                        src="js_site_web/images/products_mini/product-modern-sofa.jpg" alt="">
                     <div class="divsect3 my-3">
-                    <p class="pachat"><strong>Minimal T-Shirt</strong></p>
-                    <span class="prixsect3 text-danger">$15.00</span>
+                        <p class="pachat"><strong>Modern Sofa</strong></p>
+
+                        <span class="prixsect3 text-danger">$900.00</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-plates.jpg"
-                    alt="">
+
+                <div class="col-4 text-center"><img class="w-100 my-2"
+                        src="js_site_web/images/products_mini/product-bed.jpg" alt="">
                     <div class="divsect3 my-3">
-                    <p class="pachat"><strong>Plates Set</strong></p>
-                    <span class="prixsect3 text-danger">$30.00</p>
+                        <p class="pachat"><strong>Bed Linen</strong></p>
+                        <span class="prixsect3 text-danger">$79.00</span>
+                    </div>
+                </div>
+
+                <div class="col-4 text-center"><img class="w-100 my-2"
+                        src="js_site_web/images/products_mini/product-shoes.jpg" alt="">
+                    <div class="divsect3 my-3">
+                        <p class="pachat"><strong>Minimal Shoes</strong></p>
+                        <span class="prixsect3 text-danger">$60.00</span>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            
-
-
-            <div class="col-4 text-center"><img class="w-100"
-                    src="js_site_web/images/products_mini/product-modern-sofa.jpg" alt="">
-                    <div class="divsect3 my-3">
-                    <p class="pachat"><strong>Modern Sofa</strong></p>
-
-                    <span class="prixsect3 text-danger">$900.00</span>
-                </div>
-            </div>
-            
-            <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-bed.jpg"
-                    alt="">
-                    <div class="divsect3 my-3">
-                    <p class="pachat"><strong>Bed Linen</strong></p>
-                    <span class="prixsect3 text-danger">$79.00</span>
-                </div>
-            </div>
-            
-            <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-shoes.jpg"
-                alt="">
-                <div class="divsect3 my-3">
-                    <p class="pachat"><strong>Minimal Shoes</strong></p>
-                    <span class="prixsect3 text-danger">$60.00</span>
-                </div>
-            </div>
         </div>
-    </div>
-</div>
-    
-</section>
+
+    </section>
 
     <section class="sect4">
-        <img class="img" src="" alt="">
-        <div class="container">
-            <div class='divsect4 d-flex justify-content-center align-items-center'>
+
+        <div class="divbg d-flex justify-content-center align-items-center text-center">
+
+            <div class='divsect4 align-items-center'>
                 <h1 class="h1sect4 text-white text-center"><strong>Discover Thousands Of Great Products</strong>
                 </h1>
+                <button class=" btnsect4 bg-danger text-white text-uppercase my-5 px-5 py-2">Learn More</button>
             </div>
-            <div class="divbtnsect4 text-center d-flex justify-content-center align-items-center">
-                <button class="btnsect4 bg-danger text-white text-uppercase my-5 px-5 py-2">Learn More</button>
-            </div>
+
 
         </div>
 
     </section>
 
     <section class="sect5 mx-auto my-5">
-        <!-- Il faut faire un carousel -->
+        <!-- Il faut faire un carousel en js -->
         <h5 class="h5sect5 text-center my-5"><strong>Hot Fashion Products</strong></h5>
 
         <div class="row w-50 mx-auto">
 
             <div class="col-3 article1 text-center"><img class="w-100"
                     src="js_site_web/images/products/product-tshitr-white-700x500.jpg" alt="">
+
                 <p class="psect5"><strong>White T-Shirt</strong></p>
                 <span class="text-danger">$23.00</span>
             </div>
             <div class="col-3 article2 text-center"><img class="w-100"
                     src="js_site_web/images/products/product-bag-2-700x500.jpg" alt="">
-                <p class="psect5"><strong>Red Bag</strong></p>
-                <span class="text-secondary">$600.00</span>
-                <span class="text-danger">$450.00</span>
+                <div class='divsect3 my-3 d-flex justify-content-center'>
+                    <div class="divsale">
+                        <span class="sale rounded-circle px-2 py-3 bg-danger text-white">Sale!</span>
+
+                    </div>
+                    <div>
+                        <p class="pachat"><strong>Red Bag</strong></p>
+                        <span class="prixsect3 text-secondary"><del>$600.00</del></span>
+                        <span class="prixsect3 text-danger">$450.00</span>
+                    </div>
+
+                </div>
+
 
             </div>
             <div class="col-3 article3 text-center"><img class="w-100"
                     src="js_site_web/images/products/product-jacket-700x500.jpg" alt="">
+
                 <p class="psect5"><strong>Sporty Jacket</strong></p>
                 <span class="text-danger">$40.00</span>
             </div>
@@ -210,7 +243,7 @@
         <!-- refaire ca pour les 3 avec le contenue -->
         <div class="row">
             <div class="col-4 bg-light text-center p-5 my-4">
-                <i></i>
+                <i class="far fa-check-circle fa-3x mb-5"></i>
                 <p class="psect6  text-uppercase"><strong>Trsuted by 10,000 customers</strong></p>
                 <p class="psect6 text-center text-secondary my-5">Far far away, behind the world mountains, far from the
                     countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -221,7 +254,7 @@
 
 
             <div class="col-4 bg-danger text-center p-5 my-4">
-                <i></i>
+                <i class="fas fa-paper-plane text-white fa-3x mb-5"></i>
                 <p class="psect6 text-uppercase text-white"><strong>Very Fast Shipping</strong></p>
                 <p class="psect6 text-center text-white my-5">Far far away, behind the world mountains, far from the
                     countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -231,7 +264,7 @@
             </div>
 
             <div class="col-4 bg-light text-center p-5 my-4">
-                <i></i>
+                <i class="far fa-check-circle fa-3x mb-5"></i>
                 <p class="psect6 text-uppercase"><strong>Trsuted by 10,000 customers</strong></p>
                 <p class="psect6 text-center text-secondary my-5">Far far away, behind the world mountains, far from the
                     countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -253,14 +286,23 @@
                 </div>
                 <div class="col-4 border-left border-right px-5">
                     <h5 class="text-white text-uppercase "><strong>Recent posts</strong></h5>
-                    <p class="pinfo border-bottom">> Hello world!</p>
-                    <p class="pinfo border-bottom">> Wonderful serenity</p>
-                    <p class="pinfo border-bottom">> In my soul and absorb its power</p>
-                    <p class="pinfo border-bottom">> I hear the buzz of the little</p>
-
+                    <!-- mettre des a entre les p pour créer des liens -->
+                    <a href="">
+                        <p class="pinfo border-bottom"><span>></span> Hello world!</p>
+                    </a>
+                    <a href="">
+                        <p class="pinfo border-bottom"><span>></span> Wonderful serenity</p>
+                    </a>
+                    <a href="">
+                        <p class="pinfo border-bottom"><span>></span> In my soul and absorb its power</p>
+                    </a>
+                    <a href="">
+                        <p class="pinfo border-bottom"><span>></span> I hear the buzz of the little</p>
+                    </a>
                 </div>
                 <div class="col-4 px-5 my-3">
                     <h5 class="text-white text-uppercase"><strong>Cloud</strong></h5>
+                    <!-- mettre espace entre la bordure et le texte -->
                     <a href="#" class="m-2 border">BUSINESS</a>
                     <a href="#" class="m-2 border">CONFERENCE</a>
                     <a href="#" class="m-2 border">GADGETS</a>
@@ -281,8 +323,9 @@
     </footer>
 
 
-
-    <script src="./js/index.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script type="module" src="./js/index.js"></script>
 </body>
 
 </html>

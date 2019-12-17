@@ -13,10 +13,12 @@ body header .navbartout .div .navbar {
   list-style: none;
   text-decoration: none;
 }
+body header .navbartout .div .navbar:hover {
+  color: black;
+}
 body header .navbartout .carre {
   width: 30px;
   height: 30px;
-  border: none;
 }
 body header .navbartout .btnheader {
   border: none;
@@ -36,8 +38,24 @@ body .sect1 .container .row .a {
   align-items: center;
 }
 body .sect1 .container .row .a .btnsect1 {
+  background-color: #bd584e;
   border-radius: 50px;
   border: none;
+  font-size: 100%;
+}
+body .sect1 .container .row .a .btnsect1:hover {
+  background-color: black;
+}
+body .sect1 .container .row .a .btnsect1::after {
+  content: "";
+}
+body .sect1 .container .row .a .btnsect1:hover::after {
+  content: ">";
+  padding-left: 10px;
+  transition: ease 0.5s;
+}
+body .sect1 .container .row .a .btnsect1:focus {
+  outline: none;
 }
 body .sect2 .divsect2 {
   display: flex;
@@ -76,18 +94,19 @@ body .sect3 .container .row {
 body .sect3 .container .row .col-4 {
   align-items: center;
 }
-body .sect4 .img {
+body .sect4 .divbg {
   background-image: url("../js_site_web/images/cta-bg.jpg");
-  width: 100vw;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-position: center;
+  height: 700px;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
-body .sect4 .container .btnsect4 {
+body .sect4 .divbg .btnsect4 {
   border-radius: 30px;
   border: none;
+}
+body .sect5 {
+  font-size: 10px;
 }
 body .sect6 button {
   border: none;
@@ -101,6 +120,9 @@ footer .info a {
   text-decoration: none;
   color: #b6b4b4;
   border-radius: none;
+}
+footer .info p:hover {
+  color: white;
 }
 footer .copy {
   background-color: #1b1a1a;
