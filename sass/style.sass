@@ -1,21 +1,26 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 body
+
     header
         .titre
             display: flex
             justify-content: center
-        .div
-            flex-wrap: nowrap
-            display: flex
-            justify-content: center
-            margin: 5% 0
-            .navbar
-                list-style: none
-                text-decoration: none
+        .navbartout
+
+            .div
+                flex-wrap: nowrap
+                display: flex
+                justify-content: center
+                margin: 5% 0
+                .navbar
+                    list-style: none
+                    text-decoration: none
             .carre
-                width: 5%
-                height: 5%
-                
+                width: 30px
+                height: 30px
+                border: none
+            .btnheader
+                border: none
 
     .sect1
         background-color: #F3F3F3
@@ -35,15 +40,14 @@ body
         .divsect2
             display: flex
             justify-content: center
-        
+
             .img1
                 background-image: url("../js_site_web/images/services/service-1.jpg")
                 width: 30%
                 height: 205px
                 background-position: center
                 background-size: cover
-    
-                
+
             .img2
                 background-image: url("../js_site_web/images/services/service-2.jpg")
                 width: 30%
@@ -72,12 +76,16 @@ body
                     align-items: center
 
     .sect4
-        .container
+        .img
             background-image: url('../js_site_web/images/cta-bg.jpg')
-            width: 100%
-            height: 50vh
+            width: 100vw
+            height: 100vh
+            background-repeat: no-repeat
             background-position: center
             background-size: cover
+            background-attachment: fixed
+        .container
+
             .btnsect4
                 border-radius: 30px
                 border: none
@@ -92,7 +100,17 @@ body
 footer
     .info
         background-color: rgb(48, 46, 46)
+    .info a   
+        text-decoration: none
+        color: #b6b4b4
+        border-radius: none
+
+            
     .copy
         background-color: rgb(27, 26, 26)
 footer .pinfo
     color: #b6b4b4
+footer
+    font-size: 15px
+footer a
+    border-color: #b6b4b4

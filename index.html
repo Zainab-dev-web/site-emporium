@@ -12,18 +12,20 @@
 
 <body>
     <header class="text-center">
-        <img class="w-0 mt-5"src="js_site_web/images/logo.png" alt="">
-        <div class="div">
-            <nav class="navbar text-uppercase"><a class="text-dark" href="#">Home</a class="text-dark"></nav>
-            <nav class="navbar text-uppercase"><a class="text-dark" href="#">Product</a></nav class="navbar text-uppercase">
-            <nav class="navbar text-uppercase"><a class="text-dark" href="#">Blog</a></nav>
-            <nav class="navbar text-uppercase"><a class="text-dark" href="#">Elements</a href=""></nav>
-            <nav class="navbar text-uppercase"><a class="text-dark" href="#">About</a></nav>
-            <nav class="navbar text-uppercase"><a class="text-dark" href="#">Contact</a></nav>
-        <!-- <button class="carre ml-auto bg-white border-dark"></button>
-        <button class="carre ml-auto bg-dark border-dark"></button> -->
-        <button class='btnheader bg-dark text-light'>Connection</button>
-    </div>
+        <img class="w-0 mt-5" src="js_site_web/images/logo.png" alt="">
+        <div class="navbartout ">
+            <div class="div text-center flex-nowrap ">
+                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Home</a></nav>
+                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Product</a></nav>
+                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Blog</a></nav>
+                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Elements</a></nav>
+                <nav class="navbar text-uppercase"><a class="text-dark" href="#">About</a></nav>
+                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Contact</a></nav>
+            </div>
+            <div class="carre ml-auto bg-white border-dark"></div>
+            <div class="carre ml-auto bg-dark border-dark"></div>
+            <button class='btnheader bg-dark text-light ml-auto'>Connection</button>
+        </div>
     </header>
 
     <section class="sect1 my-5 mx-auto">
@@ -33,7 +35,8 @@
                     <h2 class="titreh5 text-danger">Shop at</h2>
                     <br>
                     <h1 class="titreh1"><strong>emporium.</strong></h1>
-                    <p class="psect1 my-3 text-secondary">A wonderful serenity has taken possession of my entire soul, like
+                    <p class="psect1 my-3 text-secondary">A wonderful serenity has taken possession of my entire soul,
+                        like
                         these
                         sweet
                         mornings of springs which l-enjoy with my.</p>
@@ -66,25 +69,20 @@
                         src="./js_site_web/images/products_mini/product-luxry-sofa.jpg" alt="">
                     <div class="divsect3 my-3">
                         <p class="pachat"><strong>Luxury Sofa</strong></p>
+                        <!-- mettre une div rouge ronde avec un border-radius avec text-white et ecrit sale! -->
                         <p class="prixsect3 text-danger">$600.00</p>
                     </div>
                 </div>
                 <div class="col-4 text-center"><img class="w-100"
                         src="js_site_web/images/products_mini/product-gloves.jpg" alt="">
-                    <div class="row ">
-                        <div class="col-4 text-center">
-                            <i class="icone bg-danger"></i>
-
-
-                            <div class='divsect3 my-3'>
-                                <p class="pachat"><strong>Leather Gloves</strong></p>
-                                <span class="prixsect3 text-secondary">$34.00</span>
-                                <span class="prixsect3 text-danger">$27.00</span>
-                            </div>
-                        </div>
+                    <i class="icone bg-danger"></i>
+                    <div class='divsect3 my-3'>
+                        <p class="pachat"><strong>Leather Gloves</strong></p>
+                        <span class="prixsect3 text-secondary">$34.00</span>
+                        <span class="prixsect3 text-danger">$27.00</span>
                     </div>
-
                 </div>
+
                 <div class="col-4 text-center"><img class="w-100"
                         src="js_site_web/images/products_mini/product-cups.jpg" alt="">
                     <div class="divsect3 my-3">
@@ -93,74 +91,76 @@
                     </div>
                 </div>
             </div>
-
+            
+            
             <div class="row">
-
-                <div class="col-4 text-center"><img class="w-100"
-                        src="js_site_web/images/products/product-bag-700x500.jpg" alt="">
+                
+                <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products/product-bag-700x500.jpg"
+                    alt="">
 
                     <i class="icone bg-danger"></i>
 
-                    <div class="divsect3 my-3">
-                        <p class="pachat"><strong>Women Bag</strong></p>
-                        <span class="prixsect3 text-secondary">$420.00</span>
-                        <span class="prixsect3 text-danger">$350.00</span>
-
-                    </div>
+                <div class="divsect3 my-3">
+                    <p class="pachat"><strong>Women Bag</strong></p>
+                    <span class="prixsect3 text-secondary">$420.00</span>
+                    <span class="prixsect3 text-danger">$350.00</span>
+                    
                 </div>
-                <div class="col-4 text-center"><img class="w-100"
-                        src="js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
-                    <div class="divsect3 my-3">
-                        <p class="pachat"><strong>Minimal T-Shirt</strong></p>
-                        <span class="prixsect3 text-danger">$15.00</span>
-                    </div>
-                </div>
-
             </div>
+            <div class="col-4 text-center"><img class="w-100"
+                    src="js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
+                    <div class="divsect3 my-3">
+                    <p class="pachat"><strong>Minimal T-Shirt</strong></p>
+                    <span class="prixsect3 text-danger">$15.00</span>
+                </div>
+            </div>
+            
             <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-plates.jpg"
                     alt="">
-                <div class="divsect3 my-3">
+                    <div class="divsect3 my-3">
                     <p class="pachat"><strong>Plates Set</strong></p>
                     <span class="prixsect3 text-danger">$30.00</p>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
+        <div class="row">
+            
 
 
-
-                <div class="col-4 text-center"><img class="w-100"
-                        src="js_site_web/images/products_mini/product-modern-sofa.jpg" alt="">
+            <div class="col-4 text-center"><img class="w-100"
+                    src="js_site_web/images/products_mini/product-modern-sofa.jpg" alt="">
                     <div class="divsect3 my-3">
-                        <p class="pachat"><strong>Modern Sofa</strong></p>
+                    <p class="pachat"><strong>Modern Sofa</strong></p>
 
-                        <span class="prixsect3 text-danger">$900.00</span>
-                    </div>
+                    <span class="prixsect3 text-danger">$900.00</span>
                 </div>
-
-                <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-bed.jpg"
-                        alt="">
+            </div>
+            
+            <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-bed.jpg"
+                    alt="">
                     <div class="divsect3 my-3">
-                        <p class="pachat"><strong>Bed Linen</strong></p>
-                        <span class="prixsect3 text-danger">$79.00</span>
-                    </div>
+                    <p class="pachat"><strong>Bed Linen</strong></p>
+                    <span class="prixsect3 text-danger">$79.00</span>
                 </div>
-
-                <div class="col-4 text-center"><img class="w-100"
-                        src="js_site_web/images/products_mini/product-shoes.jpg" alt="">
-                    <div class="divsect3 my-3">
-                        <p class="pachat"><strong>Minimal Shoes</strong></p>
-                        <span class="prixsect3 text-danger">$60.00</span>
-                    </div>
+            </div>
+            
+            <div class="col-4 text-center"><img class="w-100" src="js_site_web/images/products_mini/product-shoes.jpg"
+                alt="">
+                <div class="divsect3 my-3">
+                    <p class="pachat"><strong>Minimal Shoes</strong></p>
+                    <span class="prixsect3 text-danger">$60.00</span>
                 </div>
             </div>
         </div>
-
-    </section>
+    </div>
+</div>
+    
+</section>
 
     <section class="sect4">
-        <img src="" alt="">
-        <div class="container mx-4">
+        <img class="img" src="" alt="">
+        <div class="container">
             <div class='divsect4 d-flex justify-content-center align-items-center'>
                 <h1 class="h1sect4 text-white text-center"><strong>Discover Thousands Of Great Products</strong>
                 </h1>
@@ -212,9 +212,10 @@
             <div class="col-4 bg-light text-center p-5 my-4">
                 <i></i>
                 <p class="psect6  text-uppercase"><strong>Trsuted by 10,000 customers</strong></p>
-                <p class="psect6 text-center text-secondary">Far far away, behind the world mountains, far from the
+                <p class="psect6 text-center text-secondary my-5">Far far away, behind the world mountains, far from the
                     countries Vokalia and Consonantia, there live the blind texts.</p>
-                <button class="btn1sect6 text-uppercase bg-dark text-white text-center px-3 py-2"><strong>Learn more</strong></button>
+                <button class="btn1sect6 text-uppercase bg-dark text-white text-center px-3 py-2"><strong>Learn
+                        more</strong></button>
             </div>
 
 
@@ -222,18 +223,20 @@
             <div class="col-4 bg-danger text-center p-5 my-4">
                 <i></i>
                 <p class="psect6 text-uppercase text-white"><strong>Very Fast Shipping</strong></p>
-                <p class="psect6 text-center text-white">Far far away, behind the world mountains, far from the
+                <p class="psect6 text-center text-white my-5">Far far away, behind the world mountains, far from the
                     countries Vokalia and Consonantia, there live the blind texts.</p>
-                <button class="btn1sect6 text-uppercase bg-white text-dark text-center px-3 py-2 "><strong>Learn more</strong></button>
+                <button class="btn1sect6 text-uppercase bg-white text-dark text-center px-3 py-2 "><strong>Learn
+                        more</strong></button>
 
             </div>
 
             <div class="col-4 bg-light text-center p-5 my-4">
                 <i></i>
                 <p class="psect6 text-uppercase"><strong>Trsuted by 10,000 customers</strong></p>
-                <p class="psect6 text-center text-secondary">Far far away, behind the world mountains, far from the
+                <p class="psect6 text-center text-secondary my-5">Far far away, behind the world mountains, far from the
                     countries Vokalia and Consonantia, there live the blind texts.</p>
-                <button class="btn1sect6 text-uppercase bg-dark text-white text-center px-3 py-2"><strong>Learn more</strong></button>
+                <button class="btn1sect6 text-uppercase bg-dark text-white text-center px-3 py-2"><strong>Learn
+                        more</strong></button>
 
             </div>
         </div>
@@ -243,7 +246,8 @@
             <div class="row w-75">
                 <div class="col-4 px-5">
                     <h5 class="text-white text-uppercase"><strong>About us</strong></h5>
-                    <p class="pinfo">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring
+                    <p class="pinfo">A wonderful serenity has taken possession of my entire soul, like these sweet
+                        mornings of spring
                         which l enjoy with my whole heart. I am alone, and feel the charm of existence in this spot,
                         which was created for the bliss of</p>
                 </div>
@@ -255,8 +259,18 @@
                     <p class="pinfo border-bottom">> I hear the buzz of the little</p>
 
                 </div>
-                <div class="col-4 px-5">
+                <div class="col-4 px-5 my-3">
                     <h5 class="text-white text-uppercase"><strong>Cloud</strong></h5>
+                    <a href="#" class="m-2 border">BUSINESS</a>
+                    <a href="#" class="m-2 border">CONFERENCE</a>
+                    <a href="#" class="m-2 border">GADGETS</a>
+                    <a href="#" class="m-2 border">IDENTITY</a>
+                    <a href="#" class="m-2 border">LOGO</a>
+                    <a href="#" class="m-2 border">PHOTOGARPHY</a>
+                    <a href="#" class="m-2 border">TIME</a>
+                    <a href="#" class="m-2 border">TRIPS</a>
+                    <a href="#" class="m-2 border">WORKS</a>
+                    <a href="#" class="m-2 border">WORK SPACE</a>
 
                 </div>
             </div>
