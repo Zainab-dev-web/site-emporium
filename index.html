@@ -13,7 +13,7 @@
 
 <body>
     <header class="text-center">
-        <img class="w-0 mt-5" src="js_site_web/images/logo.png" alt="">
+        <img class="mb-5" src="js_site_web/images/logo.png" alt="">
 
         <!-- <div class="navbartout ">
             
@@ -37,7 +37,9 @@
         </div> -->
 
         <!-- new navbar -->
-        <nav class="navbar navbar-expand-lg sticky-top">
+
+
+        <nav class="navbar navbar-expand-lg sticky-top  position-sticky d-flex justify-content-center">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,10 +67,70 @@
                 </ul>
             </div>
             <div class="d-flex justify-content-center align-items-center">
-                <button class="btnav1"></button>
-                <button class="btnav2"></button>
-                <button id="btnPopup" class="rounded btnheader">Connexion</button>
-                <div id="overlay" class="overlay">
+                <button class="btnav1 p-2 m-1 bg-white"></button>
+                <button class="btnav2 p-2 m-1 bg-dark"></button>
+                <button class="rounded btnnav3">Connexion</button>
+                <!-- Debut popup -->
+
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content w-75">
+                        <span class="close">&times;</span>
+                        <h2 class="my-3">Connexion</h2>
+                        <div class="row mx-auto d-flex justify-content-center">
+                            <div class="col-3">
+                                <span>Pseudo</span>
+                                <input class="form-control my-3" type="text">
+                            </div>
+                            <div class="col-3">
+                                <span>Mot de passe</span>
+                                <input class="form-control my-3" type="password">
+
+                            </div>
+
+
+
+                        </div>
+                        
+                        <h2 class="my-3">Inscription</h2>
+                        <div class="row mx-auto text-center d-flex justify-content-center">
+                            <div class="col-3">
+                                <span>Nom</span>
+                                <input class="my-3 form-control" type="text">
+                                <span>Prénom</span>
+                                <input class="border-black my-3 form-control" type="text">
+                            </div>
+                            <div class="col-3">
+                                <span>Créer un mot de passe</span>
+                                <input class="my-3 form-control" type="password">
+                                <span>Confirmer le mot de passe</span>
+                                <input class="my-3 form-control" type="password">
+
+
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-7">
+                                    <input type="text" class="form-control" placeholder="Adresse">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Ville">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Numero">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn btn-dark my-3">Se connecter</button>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <div id="overlay" class="overlay">
                     <div id="popup" class="popup">
                         <h2>exemple simple de pop
                             <span id="btnClose" class="btnClose">&times;</span>
@@ -83,9 +145,10 @@
                             tractus unius soli illis umquam placet.
                         </p>
                     </div>
-                </div>
+                </div> -->
             </div>
         </nav>
+
 
 
 
@@ -260,7 +323,7 @@
             <div class="col-3 article1 text-center"><img class="w-100"
                     src="js_site_web/images/products/product-tshitr-white-700x500.jpg" alt="">
 
-                <p class="psect5"><strong>White T-Shirt</strong></p>
+                <p class="pachat my-3"><strong>White T-Shirt</strong></p>
                 <span class="text-danger">$23.00</span>
             </div>
             <div class="col-3 article2 text-center"><img class="w-100"
@@ -283,12 +346,12 @@
             <div class="col-3 article3 text-center"><img class="w-100"
                     src="js_site_web/images/products/product-jacket-700x500.jpg" alt="">
 
-                <p class="psect5"><strong>Sporty Jacket</strong></p>
+                <p class="pachat my-3"><strong>Sporty Jacket</strong></p>
                 <span class="text-danger">$40.00</span>
             </div>
             <div class="col-3 article4 text-center"><img class="w-100"
                     src="js_site_web/images/products_mini/product-shoes.jpg" alt="">
-                <p class="psect5"><strong>Minimal Shoes</strong></p>
+                <p class="pachat my-3"><strong>Minimal Shoes</strong></p>
                 <span class="text-danger">$60.00</span>
             </div>
         </div>

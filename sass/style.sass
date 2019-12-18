@@ -1,63 +1,103 @@
 @import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 body
-
-    header
-        .titre
+    margin: 0
+    font-family: 'Poppins', sans-serif
+    header 
+        img 
+            width: 13%
+            height: 13%
+            margin-top: 10vh
+        nav
             display: flex
+            flex-direction: row
             justify-content: center
+            margin-top: 10vh
+            background-color: white
+            overflow: hidden
             .collapse
                 .nav
-                    flex-wrap: nowrap
-                    display: flex
-                    justify-content: center
-                    margin: 5% 0
                     .nav-item
-                        list-style: none
-                        text-decoration: none
-                    .nav-item:hover
-                        color: black
-                        .nav-link
+                        .nav-link 
+                            list-style: none
+                            margin-left: 4vh
+                            margin-right: 4vh
+                            text-transform: uppercase
+                            color: rgb(150, 150, 150)
+                            font-size: 14px
+                            text-decoration: none
+
+                        a:hover 
+                            color: rgb(43, 43, 43)
+                            transition: color, 1s
+
+                .btnav1 
+                    background-color: white
+                    border-color: black
+                    height: 20px
+                    width:20px
+                    border: none
+
+                .btnav1:focus
+                    outline: none
+
+                .btnav2 
+                    background-color: black
+                    height: 21px
+                    width:21px
+                    border: 0
+                    border: white 1px solid
+                    align-self: center
+                    margin-left: 5px
+                    margin-right: 10px
+                    border-color: black
+
+                .btnav2:focus
+                    outline: none
+
+                .btnav3
+                    background-color: rgb(0, 4, 54)
+                    color: white
+                    border:0
+                .modal
+                    display: none 
+                    position: fixed 
+                    z-index: 1 
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100% 
+                    overflow: auto 
+                    background-color: rgb(0,0,0)
+                    background-color: rgba(0,0,0,0.4)
+                    .modal-content
+                        background-color: #fefefe
+                        margin: 15% auto
+                        padding: 20px
+                        border: 1px solid #888
+                        width: 80% 
+                        .close
+                            color: #aaa
+                            float: right
+                            font-size: 28px
+                            font-weight: bold
+                        
+                        .close:hover
                             color: black
                             text-decoration: none
-                .btnnav1
-                    width: 30px
-                    height: 30px
-                .btnnav2
-                    width: 30px
-                    height: 30px
-
-                .btnheader
-                    border: none
-                    background-color: orangered
-                    padding: 1em 2em
-                    cursor: pointer
-                    font-size: 14pt
-                    color: black                   
-
-
-                .btnheader:hover
-                    background-color: gainsboro
-                .overlay
-                    position: fixed
-                    left:0px
-                    top:0px
-                    background-color:rgba(0, 0, 0, 0.5)
-                    width:100%
-                    height:100%
-                    display: none
-                
-                    .popup
-                        margin:20% auto
-                        width:70%
-                        background-color: rgba(228, 228, 228)
-                        border-radius:5px
-                        box-shadow:15px 20px  rgba(0, 0, 0, 0.5)
-                        padding: 1em
-                        .btnClose
-                            float: right
                             cursor: pointer
+                        .close:focus 
+                            color: black
+                            text-decoration: none
+                            cursor: pointer
+                        .modal-content h2 
+                            text-align: center
+  
 
-                    
+
+
+
+
+
 
 
 
@@ -175,6 +215,6 @@ footer
 footer a
     border-color: #b6b4b4
 
-    // pour le media query
-    //     a 1000px
-    //         mon header , ce met dans un background-color: blanc , fixed, avec un burger sur le coté
+//     // pour le media query
+//     //     a 1000px
+//     //         mon header , ce met dans un background-color: blanc , fixed, avec un burger sur le coté
