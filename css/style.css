@@ -3,6 +3,9 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+body header {
+  position: relative;
+}
 body header img {
   width: 13%;
   height: 13%;
@@ -16,6 +19,14 @@ body header nav {
   background-color: white;
   overflow: hidden;
 }
+body header nav .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+body header nav .sticky + .content {
+  padding-top: 60px;
+}
 body header nav .collapse .nav .nav-item .nav-link {
   list-style: none;
   margin-left: 4vh;
@@ -24,41 +35,42 @@ body header nav .collapse .nav .nav-item .nav-link {
   color: #969696;
   font-size: 14px;
   text-decoration: none;
+  display: block;
+  float: left;
 }
 body header nav .collapse .nav .nav-item a:hover {
   color: #2b2b2b;
   transition: color, 1s;
 }
-body header nav .collapse .btnav1 {
+body header nav .btnnav0 .btnav1 {
   background-color: white;
-  border-color: black;
   height: 20px;
   width: 20px;
-  border: none;
+  border: 1px solid black;
 }
-body header nav .collapse .btnav1:focus {
+body header nav .btnnav0 .btnav1:focus {
   outline: none;
 }
-body header nav .collapse .btnav2 {
+body header nav .btnnav0 .btnav2 {
   background-color: black;
-  height: 21px;
-  width: 21px;
+  height: 20px;
+  width: 20px;
   border: 0;
-  border: white 1px solid;
   align-self: center;
   margin-left: 5px;
   margin-right: 10px;
-  border-color: black;
 }
-body header nav .collapse .btnav2:focus {
+body header nav .btnnav0 .btnav2:focus {
   outline: none;
 }
-body header nav .collapse .btnav3 {
+body header nav .btnnav0 .btnav3 {
   background-color: #000436;
   color: white;
   border: 0;
+  border: none;
+  outline: none;
 }
-body header nav .collapse .modal {
+body header nav .btnnav0 .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -70,30 +82,30 @@ body header nav .collapse .modal {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
 }
-body header nav .collapse .modal .modal-content {
+body header nav .btnnav0 .modal .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-body header nav .collapse .modal .modal-content .close {
+body header nav .btnnav0 .modal .modal-content .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-body header nav .collapse .modal .modal-content .close:hover {
+body header nav .btnnav0 .modal .modal-content .close:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-body header nav .collapse .modal .modal-content .close:focus {
+body header nav .btnnav0 .modal .modal-content .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-body header nav .collapse .modal .modal-content .modal-content h2 {
+body header nav .btnnav0 .modal .modal-content .modal-content h2 {
   text-align: center;
 }
 body .sect1 {
