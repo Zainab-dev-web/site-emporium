@@ -18,14 +18,42 @@ body header nav {
   margin-top: 10vh;
   background-color: white;
   overflow: hidden;
+  padding: 0;
 }
 body header nav .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
+  width: 100%;
+  padding: 2%;
 }
 body header nav .sticky + .content {
   padding-top: 60px;
+}
+body header nav .collapse .nav .product_drop2 {
+  z-index: 5;
+  position: fixed;
+  background-color: black;
+  padding-left: 8px;
+  padding-top: 10px;
+  display: flex !important;
+  text-align: left;
+  margin-top: 5%;
+  margin-left: -17.5%;
+  width: 13.5%;
+  height: 220px;
+  flex-direction: column;
+}
+body header nav .collapse .nav .product_drop2 .product_drop2 a {
+  text-decoration: none;
+}
+body header nav .collapse .nav .product_drop2 .product_drop2 a:hover {
+  color: white !important;
+}
+body header nav .collapse .nav #prod {
+  padding-bottom: 31px;
+  margin: 0;
 }
 body header nav .collapse .nav .nav-item .nav-link {
   list-style: none;
@@ -182,12 +210,32 @@ body .sect3 .container .row .col-4 {
 body .sect3 .container .row .col-4 .parent {
   overflow: hidden;
 }
-body .sect3 .container .row .col-4 .parent .img {
-  width: 100%;
+body .sect3 .container .row .col-4 .parent .img-fluid {
   transition: ease 1s;
 }
-body .sect3 .container .row .col-4 .parent .img:hover {
+body .sect3 .container .row .col-4 .parent .img-fluid:hover {
   transform: scale(1.2);
+}
+body .sect3 .container .row .col-4 .parent .cacher:hover {
+  opacity: 0.7;
+}
+body .sect3 .container .row .col-4 .parent .cacher a:hover {
+  padding: 15px 0px;
+}
+body .sect3 .container .row .col-4 .parent .cacher a {
+  transition: ease 0.5s;
+  padding: 19px 10px 0px;
+  color: white;
+}
+body .sect3 .container .row .col-4 .parent #rose {
+  background-color: #bd4d4d;
+}
+body .sect3 .container .row .col-4 .parent .cacher {
+  position: absolute;
+  opacity: 0;
+  z-index: 3;
+  transition: bottom ease 1s;
+  bottom: 98px;
 }
 body .sect4 .divbg {
   background-image: url("../js_site_web/images/cta-bg.jpg");

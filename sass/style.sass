@@ -15,18 +15,45 @@ body
             margin-top: 10vh
             background-color: white
             overflow: hidden
+            padding: 0
 
         
             .sticky
                 position: fixed
                 top: 0
                 width: 100%
+                z-index: 1
+                width: 100%
+                padding: 2%
+  
             .sticky + .content
                 padding-top: 60px
             
             .collapse
                 .nav
+                    .product_drop2
+                        z-index: 5
+                        position: fixed
+                        background-color: black
+                        padding-left: 8px
+                        padding-top: 10px
+                        display: flex !important
+                        text-align: left
+                        margin-top: 5%
+                        margin-left: -17.5%
+                        width: 13.5%
+                        height:220px
+                        flex-direction: column
+                        .product_drop2 a
+                            text-decoration: none
+                        .product_drop2 a:hover
+                            color: white !important
+                    #prod
+                        padding-bottom: 31px
+                        margin: 0
+
                     .nav-item
+                
                         .nav-link 
                             list-style: none
                             margin-left: 4vh
@@ -37,6 +64,7 @@ body
                             text-decoration: none
                             display: block
                             float: left
+
 
                         a:hover 
                             color: rgb(43, 43, 43)
@@ -184,11 +212,35 @@ body
                     .parent
                         overflow: hidden
                         
-                        .img
-                            width: 100%
+                        .img-fluid
+                            
+                            // width: 162.25px
+                            // height: 127.77px
                             transition: ease 1s
                             &:hover
                                 transform: scale(1.2)
+                        .cacher:hover
+                            opacity: .7
+
+                        .cacher a:hover
+                            padding: 15px 0px
+
+                        .cacher a 
+                            
+                            transition: ease 0.5s
+                            padding: 19px 10px 0px
+                            color: white
+
+                        #rose
+                            background-color: rgb(189, 77, 77)
+
+                        .cacher
+                            position: absolute
+                            opacity: 0
+                            z-index: 3
+                            transition: bottom ease 1s
+                            bottom: 98px
+
                     
     
     

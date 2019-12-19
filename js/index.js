@@ -8,39 +8,53 @@ let p = document.querySelectorAll('.pachat')
 let h5 = document.querySelectorAll('h5')
 let titre = document.getElementsByClassName("titre")[0]
 console.log(nav)
-let textCarousel=document.querySelectorAll('.item')
+let textCarousel = document.querySelectorAll('.item')
 console.log(textCarousel)
+let textnav=document.querySelectorAll('.nav-link')
+console.log(textnav)
 // Ecouteur d'evenement des themes
 
 themenoir.addEventListener('click', event => {
     body.style.backgroundColor = "rgb(27, 26, 26)"
+    body.style.transition = "1s ease"
     nav.style.backgroundColor = "rgb(27, 26, 26)"
-    titre.style.color = "rgb(250, 246, 248)"
+    nav.style.transition = "1s ease"
+    titre.style.color = "#fff"
+    
+    textnav.forEach(element => {
+        element.style.color="#fff"
+    });
     p.forEach(element => {
-        element.style.color = "rgb(250, 246, 248)"
+        element.style.color = "#fff"
     });
     h5.forEach(element => {
-        element.style.color = "rgb(250, 246, 248)"
+        element.style.color = "#fff"
     });
-    textCarousel.forEach(element =>{
-        element.style.color= "rgb(250, 246, 248)"
+    textCarousel.forEach(element => {
+        element.style.color = "#fff"
     })
 
 })
 
 themeblanc.addEventListener('click', event => {
-    body.style.backgroundColor = "rgb(250, 246, 248)"
-    nav.style.backgroundColor = "rgb(250, 246, 248)"
+    body.style.backgroundColor = "#fff"
+    body.style.transition="1s ease"
+    nav.style.backgroundColor = "#fff"
+    nav.style.transition = "1s ease"
     titre.style.color = "rgb(27, 26, 26)"
+    
     p.forEach(element => {
         element.style.color = "rgb(27, 26, 26)"
     });
     h5.forEach(element => {
         element.style.color = "rgb(27, 26, 26)"
     });
-    textCarousel.forEach(element =>{
-        element.style.color= "rgb(27, 26, 26)"
+    textCarousel.forEach(element => {
+        element.style.color = "rgb(27, 26, 26)"
     })
+    textnav.forEach(element => {
+        element.style.color=""
+    });
 })
 
 
@@ -80,9 +94,9 @@ class Carousel {
         this.createNavigation()
     }
 
-/**
- * applique les bonnes dimensions aux elements du carousel
- */
+    /**
+     * applique les bonnes dimensions aux elements du carousel
+     */
 
     setStyle() {
         let ratio = this.items.lenght / this.options.slidesVisible
@@ -93,7 +107,7 @@ class Carousel {
         );
     }
 
-// Pour rajouter des boutons pour next et prev regrader a 25min
+    // Pour rajouter des boutons pour next et prev regrader a 25min
 
 
 
@@ -178,49 +192,56 @@ window.addEventListener('click', event => {
     }
 })
 
-// hover sur la navbar qui affiche un bg
+// Hover sur la navbar qui affiche un bg
 
-let product = document.getElementsByClassName("nav-item")[1]
-
-
-// ce gestionnaire sera exécuté une seule fois lorsque le curseur passera au dessus de la liste non ordonnée
-product.addEventListener("mouseenter", function (event) {
-    // met en surbrillance la cible de mouseenter
-    let bg = document.createElement('div')
-    bg.style.backgroundColor = "grey"
-    event.target.style.backgroundColor = "grey"
+let product = document.getElementsByClassName("nav-link")[1]
+let prodJs= document.getElementsByClassName('product_drop')[0]
+product.addEventListener('mouseover', ()=>{
+    prodJs.setAttribute('class', 'product_drop2')
+    prodJs.classList.remove('d-none')
+    prodJs.addEventListener('mouseover', ()=>{
+        prodJs.setAttribute('class', 'product_drop2')
+        prodJs.classList.remove('d-none')
+        product.addEventListener('mouseout' , ()=>{
+        prodJs.classList.replace('product_drop2', 'product_drop')
+        prodJs.classList.add('d-none')
+    });prodJs.addEventListener('mouseout' , ()=>{
+        prodJs.classList.replace('product_drop2', 'product_drop')
+        prodJs.classList.add('d-none')
+    });
+    })
 })
 
 
 
+
+
+
+
 // Pour que la navbar s'affiche en fixed ou stiky
+let logo = document.createElement('h3');
+logo.innerText = "emporium."
+logo.style.fontWeight = "bold"
 
-
-let sticky = nav.offsetTop;
-
-function myFunction() {
-    if (window.scrollY > 50) {
-        nav.classList.add("sticky")
-    } else {
-        nav.classList.remove("sticky");
-
-    }
-}
 
 window.onscroll = function () { myFunction() };
 
+let divlogo = document.getElementById('divlogo');
+function myFunction() {
+    if (window.scrollY > 180) {
+        nav.classList.add("sticky");
+        divlogo.appendChild(logo)
+        logo.style.display = "block"
+        nav.style.transition = "1s ease"
+    } else {
+        nav.classList.remove("sticky");
+        logo.style.display = "none"
+        nav.style.transition = "none"
+    }
 
-// autre manier
 
-// window.scrollTop = 600
-// let scroll = body.scrollTop
-// window.addEventListener('scroll', () => {
-//     if (body.scrollTop == scroll) {
-//         nav.classList.add("sticky-top");
-//     } else {
-//         nav.classList.remove("sticky-top");
-//     }
-// })
+}
 
+// Hover avec une row avec 2 col-6
 
-
+// j'ai fais avec du html css

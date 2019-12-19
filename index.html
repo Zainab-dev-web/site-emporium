@@ -41,6 +41,7 @@
 
 
         <nav class="navbar navbar-expand-lg sticky-top  d-flex justify-content-center">
+            <div id="divlogo"></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,8 +52,17 @@
                         <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Product</a>
+                        <a id="prod" class="nav-link" href="#">Product</a>
                     </li>
+                    <div class="product_drop d-none">
+                        <a class="text-secondary " href="#">WooCommerce shop archive</a>
+                        <br>
+                        <a class="text-secondary " href="#">Cart</a>
+                        <br>
+                        <a class="text-secondary " href="#">Checkout</a>
+                        <br>
+                        <a class="text-secondary " href="#">My account</a>
+                    </div>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Blog</a>
                     </li>
@@ -75,7 +85,7 @@
 
                 <div id="myModal" class="modal ">
                     <!-- Modal content -->
-                    <div class="modal-content w-75 d-flex justify-content-center align-items-center">
+                    <div class="modal-content w-75 d-flex justify-content-center">
 
 
                         <span class="close ml-auto">&times;</span>
@@ -160,7 +170,7 @@
 
     </header>
 
-    <section class="sect1 my-5 mx-auto">
+    <section class="sect1 mb-5 mx-auto">
         <div class="container">
             <div class="row ">
                 <div class="col a">
@@ -199,9 +209,13 @@
             <div class="row mx-auto">
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class='img w-100 my-2' src="./js_site_web/images/products_mini/product-luxry-sofa.jpg" alt="">
-
+                        <img class='img-fluid' src="./js_site_web/images/products_mini/product-luxry-sofa.jpg" alt="">
+                        <div class="row  cacher container">
+                            <a class="col-6" href="">View Detail</a>
+                            <a id="rose" class="col-6" href=""> Add to cart</a>
+                        </div>
                     </div>
+
                     <div class="divsect3 my-3">
                         <p class="pachat"><strong>Luxury Sofa</strong></p>
                         <!-- mettre une div rouge ronde avec un border-radius avec text-white et ecrit sale! -->
@@ -210,7 +224,7 @@
                 </div>
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class=" img w-100 my-2" src="js_site_web/images/products_mini/product-gloves.jpg" alt="">
+                        <img class="img-fluid " src="js_site_web/images/products_mini/product-gloves.jpg" alt="">
 
                     </div>
 
@@ -230,7 +244,7 @@
 
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class="img w-100 my-2" src="js_site_web/images/products_mini/product-cups.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products_mini/product-cups.jpg" alt="">
 
                     </div>
                     <div class="divsect3 my-3">
@@ -241,11 +255,11 @@
             </div>
 
 
-            <div class="row">
+            <div class="row mx-auto">
 
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class="img w-100 my-2" src="js_site_web/images/products/product-bag-700x500.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products/product-bag-700x500.jpg" alt="">
 
                     </div>
 
@@ -266,7 +280,7 @@
                 </div>
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class="img w-100 my-2" src="js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
 
                     </div>
                     <div class="divsect3 my-3">
@@ -277,24 +291,22 @@
 
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <!-- arranger cette img de la meme taille que les autres -->
-                        <img class="img w-100 my-2" src="js_site_web/images/products_mini/product-plates.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products_mini/product-plates.jpg" alt="">
 
                     </div>
                     <div class="divsect3 my-3">
-                        <p class="pachat"><strong>Plates Set</strong></p>
-                        <span class="prixsect3 text-danger">$30.00</p>
+                        <p class="pachat"><strong>Minimal T-Shirt</strong></p>
+                        <span class="prixsect3 text-danger">$15.00</span>
                     </div>
                 </div>
             </div>
-
-            <div class="row">
+            <div class="row mx-auto">
 
 
 
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class="img w-100 my-2" src="js_site_web/images/products_mini/product-modern-sofa.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products_mini/product-modern-sofa.jpg" alt="">
 
                     </div>
                     <div class="divsect3 my-3">
@@ -306,7 +318,7 @@
 
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class="img w-100 my-2" src="js_site_web/images/products_mini/product-bed.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products_mini/product-bed.jpg" alt="">
 
                     </div>
 
@@ -318,7 +330,7 @@
 
                 <div class="col-4 text-center">
                     <div class="parent">
-                        <img class="img w-100 my-2" src="js_site_web/images/products_mini/product-shoes.jpg" alt="">
+                        <img class="img-fluid" src="js_site_web/images/products_mini/product-shoes.jpg" alt="">
 
                     </div>
                     <div class="divsect3 my-3">
@@ -328,7 +340,7 @@
                 </div>
             </div>
         </div>
-        </div>
+
 
     </section>
 
@@ -339,7 +351,7 @@
             <div class='divsect4 align-items-center'>
                 <h1 class="h1sect4 text-white text-center"><strong>Discover Thousands Of Great Products</strong>
                 </h1>
-                <button class=" btnsect4 bg-danger text-white text-uppercase my-5 px-5 py-2">Learn More</button>
+                <button class="btnsect4 bg-danger text-white text-uppercase my-5 px-5 py-2">Learn More</button>
             </div>
 
 
