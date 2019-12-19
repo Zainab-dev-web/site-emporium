@@ -179,6 +179,16 @@ body .sect3 .container .row {
 body .sect3 .container .row .col-4 {
   align-items: center;
 }
+body .sect3 .container .row .col-4 .parent {
+  overflow: hidden;
+}
+body .sect3 .container .row .col-4 .parent .img {
+  width: 100%;
+  transition: ease 1s;
+}
+body .sect3 .container .row .col-4 .parent .img:hover {
+  transform: scale(1.2);
+}
 body .sect4 .divbg {
   background-image: url("../js_site_web/images/cta-bg.jpg");
   height: 700px;
@@ -192,6 +202,18 @@ body .sect4 .divbg .btnsect4 {
 }
 body .sect5 {
   font-size: 10px;
+}
+body .sect5 .container .carousel {
+  position: relative;
+  overflow: hidden;
+}
+body .sect5 .container .carousel .carousel__container {
+  content: "";
+  display: table;
+  clear: both;
+}
+body .sect5 .container .carousel .carousel__container .carousel__item {
+  float: left;
 }
 body .sect6 button {
   border: none;

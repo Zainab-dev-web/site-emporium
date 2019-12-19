@@ -8,6 +8,8 @@ let p = document.querySelectorAll('.pachat')
 let h5 = document.querySelectorAll('h5')
 let titre = document.getElementsByClassName("titre")[0]
 console.log(nav)
+let textCarousel=document.querySelectorAll('.item')
+console.log(textCarousel)
 // Ecouteur d'evenement des themes
 
 themenoir.addEventListener('click', event => {
@@ -20,6 +22,9 @@ themenoir.addEventListener('click', event => {
     h5.forEach(element => {
         element.style.color = "rgb(250, 246, 248)"
     });
+    textCarousel.forEach(element =>{
+        element.style.color= "rgb(250, 246, 248)"
+    })
 
 })
 
@@ -33,32 +38,87 @@ themeblanc.addEventListener('click', event => {
     h5.forEach(element => {
         element.style.color = "rgb(27, 26, 26)"
     });
+    textCarousel.forEach(element =>{
+        element.style.color= "rgb(27, 26, 26)"
+    })
 })
 
 
 // Carousel en js ( se baser sur la video)
 
-class Carousel{
+class Carousel {
+
+    /**
+     * 
+     * @param {HTMLElement} element 
+     * @param {Object} options 
+     * @param {Object} options.slidesToScroll nombre d'element à afaire défiler
+     * @param {Object} options.slidesVisible nombre d'élement visibles dans un slide
+     */
+
+    constructor(element, options = {}) {
+        this.element = element;
+        this.options = Object.assign({}, {
+            slidesToScroll: 1,
+            slidesVisible: 1
+        }, options)
+        children.map = [].slice.call(element.children)
+        let root = this.createDivWithClass('carousel')
+        this.container = this.createDivWithClass('carousel__container')
+
+        root.appendChild(this.container)
+        root.setAttribute('class', 'carousel')
+        this.element.appendChild(root)
+        let items = children.forEach((child) => {
+            let item = this.createDivWithClass('carousel__item')
+            item.appendChild('child')
+            this.container.appendChild('child')
+            return item
+
+        })
+        this.setStyle()
+        this.createNavigation()
+    }
 
 /**
- * 
- * @param {HTMLElement} element 
- * @param {Object} options 
- * @param {Object} options.slidesToScroll nombre d'element à afaire défiler
- * @param {Object} options.slidesVisible nombre d'élement visibles dans un slide
+ * applique les bonnes dimensions aux elements du carousel
  */
 
-    constructor(element, options={}){
+    setStyle() {
+        let ratio = this.items.lenght / this.options.slidesVisible
+        this.container.style.width = (ratio * 100) + "%"
+        this.items.forEach(item => item.style.width = ((100 / this.option.slidesVisible) / ratio) + "%"
 
+
+        );
     }
+
+// Pour rajouter des boutons pour next et prev regrader a 25min
+
+
+
+    /**
+     * 
+     * 
+     * @param {string} className 
+     * @returns {HTMLElement}
+     */
+
+
+    createDivWithClass(className) {
+        let div = docuement.createElement('div')
+        div.setAttribute('class', 'className')
+        return div
+    }
+
 }
 
 
 document.addEventListener('DOMContentLoaded', function () {
 
     new Carousel(document.querySelector('#carousel1'), {
-        slidesToScroll: 4,
-        slidesVisible: 4
+        slidesToScroll: 3,
+        slidesVisible: 3
     })
 
 })
@@ -134,9 +194,6 @@ product.addEventListener("mouseenter", function (event) {
 
 
 // Pour que la navbar s'affiche en fixed ou stiky
-
-
-
 
 
 let sticky = nav.offsetTop;

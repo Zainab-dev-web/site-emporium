@@ -178,9 +178,20 @@ body
             .row
                 display: flex
                 justify-content: center
-
                 .col-4
                     align-items: center
+                    
+                    .parent
+                        overflow: hidden
+                        
+                        .img
+                            width: 100%
+                            transition: ease 1s
+                            &:hover
+                                transform: scale(1.2)
+                    
+    
+    
 
     .sect4
 
@@ -195,8 +206,19 @@ body
                 border-radius: 30px
                 border: none
     .sect5
-
         font-size: 10px
+        .container
+            .titrecarousel
+            .carousel
+                position: relative
+                overflow: hidden
+                    
+                .carousel__container
+                    content: ""
+                    display: table
+                    clear: both
+                    .carousel__item
+                        float: left
 
     .sect6
         button
