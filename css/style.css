@@ -20,16 +20,14 @@ body header nav {
   overflow: hidden;
   padding: 0;
 }
+body header nav .collapse3 {
+  display: flex !important;
+}
 body header nav .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
-  width: 100%;
-  padding: 2%;
-}
-body header nav .sticky + .content {
-  padding-top: 60px;
+  z-index: 8;
 }
 body header nav .collapse .nav .product_drop2 {
   z-index: 5;
@@ -261,7 +259,7 @@ body .sect5 .container .carousel .carousel__container {
   clear: both;
 }
 body .sect5 .container .carousel .carousel__container .carousel__item {
-  float: left;
+  display: inline-block;
 }
 body .sect6 button {
   border: none;

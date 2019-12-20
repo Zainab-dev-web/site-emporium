@@ -14,39 +14,18 @@
 <body>
     <header class="text-center">
         <h1 class=" titre mt-5"><strong>emporium.</strong></h1>
-        <!-- <img class="mb-5" src="js_site_web/images/logo.png" alt=""> -->
 
-        <!-- <div class="navbartout ">
-            
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="div text-center flex-nowrap ">
-                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Home</a></nav>
-                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Product</a></nav>
-                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Blog</a></nav>
-                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Elements</a></nav>
-                <nav class="navbar text-uppercase"><a class="text-dark" href="#">About</a></nav>
-                <nav class="navbar text-uppercase"><a class="text-dark" href="#">Contact</a></nav>
-                <div class="carre ml-auto bg-white border mx-1"></div>
-                <div class="carre ml-1 bg-dark border mx-1"></div> -->
-        <!-- <div>
-                    <button class='btnheader bg-dark text-light ml-auto'>Connection</button>
-                </div>
-            </div>
-        </div> -->
 
         <!-- new navbar -->
 
 
-        <nav class="navbar navbar-expand-lg sticky-top  d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg d-flex justify-content-center">
             <div id="divlogo"></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-center">
+            <div id="collapse" class="collapse d-flex navbar-collapse justify-content-center">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
@@ -142,26 +121,48 @@
                     </div>
                 </div>
 
-
-
-                <!-- <div id="overlay" class="overlay">
-                    <div id="popup" class="popup">
-                        <h2>exemple simple de pop
-                            <span id="btnClose" class="btnClose">&times;</span>
-                        </h2>
-                        <p>
-                            Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et
-                            confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus
-                            amicti, equorum adiumento pernicium graciliumque camelorum per diversa se raptantes, in
-                            tranquillis vel turbidis rebus: nec eorum quisquam aliquando stivam adprehendit vel arborem
-                            colit aut arva subigendo quaeritat victum, sed errant semper per spatia longe lateque
-                            distenta sine lare sine sedibus fixis aut legibus: nec idem perferunt diutius caelum aut
-                            tractus unius soli illis umquam placet.
-                        </p>
-                    </div>
-                </div> -->
             </div>
         </nav>
+        <nav class="navbarInvisible navbar-expand-lg d-none justify-content-center">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="collapse2" class="collapse d-none navbar-collapse justify-content-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="prod" class="nav-link" href="#">Product</a>
+                    </li>
+                    <div class="product_drop d-none">
+                        <a class="text-secondary " href="#">WooCommerce shop archive</a>
+                        <br>
+                        <a class="text-secondary " href="#">Cart</a>
+                        <br>
+                        <a class="text-secondary " href="#">Checkout</a>
+                        <br>
+                        <a class="text-secondary " href="#">My account</a>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Elements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </nav>
+
 
 
 
@@ -368,8 +369,8 @@
 
 
 
-            <div id="carousel1">
-                <div class="carousel">
+            <div class="carousel">
+                <div id="carousel1">
                     <div class="carousel__container">
                         <div class="item">
                             <div class="item__image">
@@ -423,20 +424,14 @@
                                 petite description pour tester
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div id="carousel2">
-                <div class="carousel">
-                    <div class="carousel__container">
-
+                        
                         <div class="item">
                             <div class="item__image">
                                 <img src="./js_site_web/images/products/product-tshitr-700x500.jpg" alt="">
                             </div>
                             <div class="item__body">
                                 <div class="item__title">
-                                    Nom titre 1
+                                    Nom titre 5
                                 </div>
                             </div>
                             <div class="item__description">
@@ -449,7 +444,7 @@
                             </div>
                             <div class="item__body">
                                 <div class="item__title">
-                                    Nom titre 2
+                                    Nom titre 6
                                 </div>
                             </div>
                             <div class="item__description">
@@ -462,157 +457,29 @@
                             </div>
                             <div class="item__body">
                                 <div class="item__title">
-                                    Nom titre 3
+                                    Nom titre 7
                                 </div>
                             </div>
                             <div class="item__description">
                                 petite description pour tester
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="item__image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="item__body">
-                                <div class="item__title">
-                                    Nom titre 4
-                                </div>
-                            </div>
-                            <div class="item__description">
-                                petite description pour tester
-                            </div>
-                        </div>
+                        
                     </div>
-                </div>
-            </div>
-            <div id="carousel3">
-                <div class="carousel">
-                    <div class="carousel__container">
-
-                        <div class="item">
-                            <div class="item__image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="item__body">
-                                <div class="item__title">
-                                    Nom titre 1
-                                </div>
-                            </div>
-                            <div class="item__description">
-                                petite description pour tester
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item__image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="item__body">
-                                <div class="item__title">
-                                    Nom titre 2
-                                </div>
-                            </div>
-                            <div class="item__description">
-                                petite description pour tester
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item__image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="item__body">
-                                <div class="item__title">
-                                    Nom titre 3
-                                </div>
-                            </div>
-                            <div class="item__description">
-                                petite description pour tester
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="item__image">
-                                <img src="" alt="">
-                            </div>
-                            <div class="item__body">
-                                <div class="item__title">
-                                    Nom titre 4
-                                </div>
-                            </div>
-                            <div class="item__description">
-                                petite description pour tester
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div id="carousel4">
-                    <div class="carousel">
-
-
-                        <div class="carousel__container">
-
-                            <div class="item">
-                                <div class="item__image">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="item__body">
-                                    <div class="item__title">
-                                        Nom titre 1
-                                    </div>
-                                </div>
-                                <div class="item__description">
-                                    petite description pour tester
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item__image">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="item__body">
-                                    <div class="item__title">
-                                        Nom titre 2
-                                    </div>
-                                </div>
-                                <div class="item__description">
-                                    petite description pour tester
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item__image">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="item__body">
-                                    <div class="item__title">
-                                        Nom titre 3
-                                    </div>
-                                </div>
-                                <div class="item__description">
-                                    petite description pour tester
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="item__image">
-                                    <img src="" alt="">
-                                </div>
-                                <div class="item__body">
-                                    <div class="item__title">
-                                        Nom titre 4
-                                    </div>
-                                </div>
-                                <div class="item__description">
-                                    petite description pour tester
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
+                        
                 </div>
             </div>
         </div>
-        </div>
+        
+        
+        
 
 
-        <!-- 
 
-        <h5 class="h5sect5 text-center my-5"><strong>Hot Fashion Products</strong></h5>
+
+
+        <!-- <h5 class="h5sect5 text-center my-5"><strong>Hot Fashion Products</strong></h5>
 
         <div class="row w-50 mx-auto">
 
@@ -650,8 +517,8 @@
                 <p class="pachat my-3"><strong>Minimal Shoes</strong></p>
                 <span class="text-danger">$60.00</span>
             </div>
-        </div>
- -->
+        </div> -->
+
 
     </section>
 

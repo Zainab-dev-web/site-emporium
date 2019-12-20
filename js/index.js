@@ -76,20 +76,22 @@ class Carousel {
             slidesToScroll: 1,
             slidesVisible: 1
         }, options)
-        children.map = [].slice.call(element.children)
-        let root = this.createDivWithClass('carousel')
+        let children = [].slice.call(element.children)
+        this.currentItem= 0
+        this.root = this.createDivWithClass('carousel')
         this.container = this.createDivWithClass('carousel__container')
 
-        root.appendChild(this.container)
-        root.setAttribute('class', 'carousel')
-        this.element.appendChild(root)
-        let items = children.forEach((child) => {
+        this.root.appendChild(this.container)
+        
+        this.element.appendChild(this.root)
+        this.items = children.map((child) => {
             let item = this.createDivWithClass('carousel__item')
             item.appendChild('child')
-            this.container.appendChild('child')
+            
             return item
 
         })
+        this.items.forEach(item=>this.container.appendChild(item))
         this.setStyle()
         this.createNavigation()
     }
@@ -219,28 +221,65 @@ product.addEventListener('mouseover', ()=>{
 
 
 // Pour que la navbar s'affiche en fixed ou stiky
-let logo = document.createElement('h3');
+
+
+// Lancement de la function
+
+window.onscroll = function() {myFunction()};
+
+// Déclaration de mes variables:
+
+let header = document.getElementsByTagName('header')[0]
+let navInvisible = document.getElementsByClassName('navbarInvisible')[0]
+let collapse2=Document.getElementById('collapse2')
+let divUl = document.getElementById('collapse')
+let div = document.getElementById('divlogo')
+let logo = document.createElement('h2');
 logo.innerText = "emporium."
 logo.style.fontWeight = "bold"
 
+// Ma function avec un scroll , la nav apparait a partir d'un nombre de pixels
 
-window.onscroll = function () { myFunction() };
-
-let divlogo = document.getElementById('divlogo');
-function myFunction() {
-    if (window.scrollY > 180) {
-        nav.classList.add("sticky");
-        divlogo.appendChild(logo)
-        logo.style.display = "block"
-        nav.style.transition = "1s ease"
-    } else {
-        nav.classList.remove("sticky");
-        logo.style.display = "none"
-        nav.style.transition = "none"
+function myFunction(){
+    if(window.scrollY > 350){
+        nav.style.borderBottom = 'solid black 3px'
+        nav.classList.add("sticky")
+        div.appendChild(logo)
+        logo.style.display = 'block'
+        divUl.style.paddingTop = '2%'
+        divUl.style.transition = '2s ease'
+        navInvisible.classList.add('navbarInvisible2')
+        collapse2.classList.add('collapse3')
+    }else{
+        nav.classList.remove("sticky")
+        nav.style.borderBottom = '0'
+        logo.style.display = 'none'
+        divUl.style.paddingTop = '0'
+        divUl.style.transition = 'none'
+        navInvisible.classList.remove('navbarInvisible2')
+        collapse2.classList.remove('collapse3')
     }
-
-
 }
+
+
+
+// window.onscroll = function () { myFunction() };
+
+// let divlogo = document.getElementById('divlogo');
+// function myFunction() {
+//     if (window.scrollY > 180) {
+//         nav.classList.add("sticky");
+//         divlogo.appendChild(logo)
+//         logo.style.display = "block"
+//         nav.style.transition = "1s ease"
+//     } else {
+//         nav.classList.remove("sticky");
+//         logo.style.display = "none"
+//         nav.style.transition = "none"
+//     }
+
+
+// }
 
 // Hover avec une row avec 2 col-6
 
