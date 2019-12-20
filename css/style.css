@@ -215,7 +215,7 @@ body .sect3 .container .row .col-4 .parent .img-fluid:hover {
   transform: scale(1.2);
 }
 body .sect3 .container .row .col-4 .parent .cacher:hover {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 body .sect3 .container .row .col-4 .parent .cacher a:hover {
   padding: 15px 0px;
@@ -227,6 +227,9 @@ body .sect3 .container .row .col-4 .parent .cacher a {
 }
 body .sect3 .container .row .col-4 .parent #rose {
   background-color: #bd4d4d;
+}
+body .sect3 .container .row .col-4 .parent #black {
+  background-color: #0c0b0b;
 }
 body .sect3 .container .row .col-4 .parent .cacher {
   position: absolute;

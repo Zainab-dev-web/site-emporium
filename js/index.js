@@ -7,6 +7,7 @@ let nav = document.getElementsByTagName('nav')[0]
 let p = document.querySelectorAll('.pachat')
 let h5 = document.querySelectorAll('h5')
 let titre = document.getElementsByClassName("titre")[0]
+let textdrop=document.querySelectorAll('.product_drop')
 console.log(nav)
 let textCarousel = document.querySelectorAll('.item')
 console.log(textCarousel)
@@ -21,6 +22,9 @@ themenoir.addEventListener('click', event => {
     nav.style.transition = "1s ease"
     titre.style.color = "#fff"
     
+    textdrop.forEach(element=>{
+        element.style.color="#fff"
+    })
     textnav.forEach(element => {
         element.style.color="#fff"
     });
@@ -42,7 +46,10 @@ themeblanc.addEventListener('click', event => {
     nav.style.backgroundColor = "#fff"
     nav.style.transition = "1s ease"
     titre.style.color = "rgb(27, 26, 26)"
-    
+
+    textdrop.forEach(element=>{
+        element.style.color=""
+    })
     p.forEach(element => {
         element.style.color = "rgb(27, 26, 26)"
     });
@@ -136,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesToScroll: 3,
         slidesVisible: 3
     })
-
+// Faire un calcul pour en mettre 4 slidesVisible
 })
 
 
