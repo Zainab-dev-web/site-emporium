@@ -231,6 +231,9 @@ body .sect3 .container .row .col-4 .parent #rose {
 body .sect3 .container .row .col-4 .parent #black {
   background-color: #0c0b0b;
 }
+body .sect3 .container .row .col-4 .parent .col-6 {
+  text-decoration: none;
+}
 body .sect3 .container .row .col-4 .parent .cacher {
   position: absolute;
   opacity: 0;
