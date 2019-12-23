@@ -3,9 +3,6 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
-body header {
-  position: relative;
-}
 body header img {
   width: 13%;
   height: 13%;
@@ -20,16 +17,17 @@ body header nav {
   overflow: hidden;
   padding: 0;
 }
-body header nav .collapse3 {
-  display: flex !important;
-}
-body header nav .sticky {
+body header nav.sticky {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 8;
+  margin-top: 0;
 }
-body header nav .collapse .nav .product_drop2 {
+body header .collapse3 {
+  display: flex !important;
+}
+body header .collapse .nav .product_drop2 {
   z-index: 5;
   position: fixed;
   background-color: black;
@@ -43,17 +41,17 @@ body header nav .collapse .nav .product_drop2 {
   height: 220px;
   flex-direction: column;
 }
-body header nav .collapse .nav .product_drop2 .product_drop2 a {
+body header .collapse .nav .product_drop2 .product_drop2 a {
   text-decoration: none;
 }
-body header nav .collapse .nav .product_drop2 .product_drop2 a:hover {
+body header .collapse .nav .product_drop2 .product_drop2 a:hover {
   color: white !important;
 }
-body header nav .collapse .nav #prod {
+body header .collapse .nav #prod {
   padding-bottom: 31px;
   margin: 0;
 }
-body header nav .collapse .nav .nav-item .nav-link {
+body header .collapse .nav .nav-item .nav-link {
   list-style: none;
   margin-left: 4vh;
   margin-right: 4vh;
@@ -64,39 +62,42 @@ body header nav .collapse .nav .nav-item .nav-link {
   display: block;
   float: left;
 }
-body header nav .collapse .nav .nav-item a:hover {
+body header .collapse .nav .nav-item a:hover {
   color: #2b2b2b;
   transition: color, 1s;
 }
-body header nav .btnnav0 .btnav1 {
+body header .btnnav0 .btnav1 {
   background-color: white;
   height: 20px;
   width: 20px;
   border: 1px solid black;
 }
-body header nav .btnnav0 .btnav1:focus {
+body header .btnnav0 .btnav1:focus {
   outline: none;
 }
-body header nav .btnnav0 .btnav2 {
+body header .btnnav0 .btnav2 {
   background-color: black;
-  height: 20px;
-  width: 20px;
-  border: 0;
+  height: 22px;
+  width: 22px;
+  border: 1px solid white;
   align-self: center;
   margin-left: 5px;
   margin-right: 10px;
 }
-body header nav .btnnav0 .btnav2:focus {
+body header .btnnav0 .btnav2:focus {
   outline: none;
 }
-body header nav .btnnav0 .btnav3 {
-  background-color: #000436;
+body header .btnnav0 .btnav3 {
+  background-color: #2c2c2c;
   color: white;
+  border-radius: 5px;
   border: 0;
-  border: none;
+  padding: 3px 5px;
+}
+body header .btnnav0 .btnav3:focus {
   outline: none;
 }
-body header nav .btnnav0 .modal {
+body header .btnnav0 .modal {
   display: none;
   position: fixed;
   z-index: 1;
@@ -108,30 +109,30 @@ body header nav .btnnav0 .modal {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
 }
-body header nav .btnnav0 .modal .modal-content {
+body header .btnnav0 .modal .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
 }
-body header nav .btnnav0 .modal .modal-content .close {
+body header .btnnav0 .modal .modal-content .close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
-body header nav .btnnav0 .modal .modal-content .close:hover {
+body header .btnnav0 .modal .modal-content .close:hover {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-body header nav .btnnav0 .modal .modal-content .close:focus {
+body header .btnnav0 .modal .modal-content .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
-body header nav .btnnav0 .modal .modal-content .modal-content h2 {
+body header .btnnav0 .modal .modal-content .modal-content h2 {
   text-align: center;
 }
 body .sect1 {
@@ -252,22 +253,89 @@ body .sect4 .divbg .btnsect4 {
   border-radius: 30px;
   border: none;
 }
+body .sect4 .divbg .btnsect4:focus {
+  outline: none;
+}
 body .sect5 {
   font-size: 10px;
 }
-body .sect5 .container .carousel {
-  position: relative;
+body .sect5 #carousel1 {
   overflow: hidden;
 }
-body .sect5 .container .carousel .carousel__container {
-  content: "";
-  display: table;
-  clear: both;
+
+.item {
+  position: relative;
+  margin: 40px 10px;
+  background-color: #fff;
+  transition: transform 0.3s;
+  transform: translate3d(0, -1px, 0);
 }
-body .sect5 .container .carousel .carousel__container .carousel__item {
+
+.item:hover {
+  transform: translate3d(0, -10px, 0);
+}
+
+.item img {
+  display: block;
+  width: 20vw;
+  height: 25vh !important;
+}
+
+.item__body {
+  padding: 25px;
+}
+
+.items {
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel__container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.carousel__item {
   display: inline-block;
 }
-body .sect6 button {
+
+.d-flex.mx-4 > div {
+  min-width: 10vw;
+}
+
+.carousel__pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.carousel__pagination__button {
+  background-color: white;
+  border: 1px grey solid;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 3px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.carousel__pagination__button:hover {
+  background-color: #525252;
+  border: 1px white solid;
+}
+
+.carousel__pagination__button--active, .carousel__pagination__button::hover {
+  transform: scale(1.4);
+}
+.carousel__pagination__button--active .sect6 button, .carousel__pagination__button::hover .sect6 button {
   border: none;
   border-radius: 5%;
 }
